@@ -11,7 +11,7 @@ We construct both network architectures with the help of PyTorch and the torchdi
 ### Contents:
 - [Background](#Background)
 - [EDA](#EDA)
-- [Network Building](#Network Building)
+- [Network Building](#Network\ Building)
 - [Modeling](#Modeling)
 - [Conclusion](#Conclusion)
 
@@ -19,8 +19,7 @@ We construct both network architectures with the help of PyTorch and the torchdi
 
 Two neural network architectures that have generated a lot of buzz in deep learning communities are residual neural networks and neural ordinary differential equations, also known as ResNets and Neural ODEs, respectively. The ResNet came first in 2015 with the paper https://arxiv.org/abs/1512.03385 and was used to solve a significant problem in deep learning. As more and more layers were added to a typical network, the accuracy would decrease! In order to combat this, shortcut connections were included in the network. This means that the input of one layer is directly added to the transformed input and the sum of these components comprises the layer's output. This is called a residual block and is the basic unit that makes up a ResNet. Typically, tens or hundreds of these blocks are linked together to build a full ResNet.
 
-![ResBlock]
-(https://www.google.com/search?q=residual+block+creative+commons+&tbm=isch&ved=2ahUKEwj9nN6vj5_oAhWNFN8KHdagDy8Q2-cCegQIABAA&oq=residual+block+creative+commons+&gs_l=img.3...40953.42911..43056...0.0..0.110.1793.7j11......0....1..gws-wiz-img.......0j0i30j0i5i30j0i8i30j0i24.Np8G0VMMl-c&ei=xoFvXv2hII2p_AbWwb74Ag#imgrc=NY2A5n0CSQyAZM)
+![ResBlock](https://www.google.com/search?q=residual+block+creative+commons+&tbm=isch&ved=2ahUKEwj9nN6vj5_oAhWNFN8KHdagDy8Q2-cCegQIABAA&oq=residual+block+creative+commons+&gs_l=img.3...40953.42911..43056...0.0..0.110.1793.7j11......0....1..gws-wiz-img.......0j0i30j0i5i30j0i8i30j0i24.Np8G0VMMl-c&ei=xoFvXv2hII2p_AbWwb74Ag#imgrc=NY2A5n0CSQyAZM)
 
 As an equation a ResNet looks like $h_{t+1} = h_t + f(h_t, \theta_t)$. The input of a hidden layer, $h_t$, is added to a function of that layer and the model parameters in order to get the next hidden layer, $h_{t+1}$. These functions are the usual neural network transformations, such as convolutions, normalizations, and linear mappings. All in all, the ResNet ended up being very successful and performed better than ever before on numerous image classification tasks.
 
